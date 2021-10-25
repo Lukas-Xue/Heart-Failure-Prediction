@@ -22,7 +22,7 @@ The dataset we decided to use is the Heart Failure Prediction Dataset from Unive
 
 ![feature description](./images/feature_description.png)
 
-Since this is a classification problem (presence or absence of heart failure), we will be training and tuning K-Nearest Neighbor, Decision Tree, Support Vector Ma- chine, Random Forest, and Naive Bayes models on the dataset, and try to find the best model for our problem.
+Since this is a classification problem (presence or absence of heart failure), we will be training and tuning K-Nearest Neighbor, Decision Tree, Support Vector Machine, Random Forest, and Naive Bayes models on the dataset, and try to find the best model for our problem.
 
 We will be splitting 918 records into two portions: the training set and the testing set. We will use all of the data to train and test, but not at the same time. We will
 
