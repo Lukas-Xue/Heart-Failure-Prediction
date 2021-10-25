@@ -12,9 +12,7 @@ Heart disease is the leading cause of death for people of most racial and ethnic
 
 This project aims to create a prediction model to forecast the probability of developing heart disease so as to help individuals be aware of their own health risk and to help doctors make reliable diagnosis more quickly.
 
-The dataset is from UCI Machine Learning Repository, which is the largest heart disease dataset available so far for research purposes. We are going to process
-
-and analyze the complex medical data related to heart disease with the help of machine learning techniques including some supervised learning algorithms such as K-Nearest Neighbor, Decision Tree, Support Vector Machine, Random Forest, and Naïve Bayes.
+The dataset is from UCI Machine Learning Repository, which is the largest heart disease dataset available so far for research purposes. We are going to process and analyze the complex medical data related to heart disease with the help of machine learning techniques including some supervised learning algorithms such as K-Nearest Neighbor, Decision Tree, Support Vector Machine, Random Forest, and Naïve Bayes.
 
 
 
