@@ -20,7 +20,20 @@ The dataset is from UCI Machine Learning Repository, which is the largest heart 
 
 The dataset we decided to use is the Heart Failure Prediction Dataset from University of California Irvine. This dataset was created by combining five independent dataset, which made it the largest heart disease dataset so far for research purposes. The dataset contains one csv file with 12 columns and 918 records, which contains 11 features of patients and 1 target variable. The target variable that describes the presence or absence of heart failure of patients is binary (0, 1) as follows.
 
-![feature description](./images/feature_description.png)
+| #    |                    Attribute Description                     |               Value               |
+| ---- | :----------------------------------------------------------: | :-------------------------------: |
+| 1    |              __*Age*__ - the age of the person               | Numerical values between 28 - 77  |
+| 2    | _**Sex**_ - the gender of the person.<br/> [‘M’ means male and ‘F’ means female] |            ‘M’ or ‘F’             |
+| 3    | _**ChestPainType**_ - the chest pain type of the person. <br/>[TA: Typical Angina, ATA: Atypical Angina, <br/>NAP: Non-Anginal Pain, ASY: Asymptomatic] |   ‘TA’, ‘ATA’, ‘NAP’, or ‘ASY’    |
+| 4    | _**Resting BP**_ - the resting blood pressure of the person in millimeters of mercury (mmHg). | Numerical values between 80 - 200 |
+| 5    | _**Cholesterol**_ - the serum cholesterol of the person in millimeters per deciliters (mm/dL). | Numerical values between 0 - 603  |
+| 6    | _**Fasting BP**_ - the fasting blood pressure of the person. <br>[0: normal and 1 means abnormal] |          0 or 1 (binary)          |
+| 7    | _**RestingECG**_ - the resting electrocardiogram results of the person. <br>[‘LVH’: showing probable or definite left ventricular hypertrophy by Estes' criteria, ‘Normal’: Normal, ‘ST’: having ST-T wave abnormality] |     ‘LVH’, ‘Normal’, or ‘ST’      |
+| 8    | _**MaxHR**_ - the maximum heart rate achieved by the person. | Numerical values between 60 - 202 |
+| 9    | _**ExerciseAngina**_ - exercise-induced angina of the person. <br>[Y: Yes, N: No] |            ‘Y’ or ‘N’             |
+| 10   |     _**Oldpeak**_ - the depression status of the person      | Numerical values between 0 - 6.2  |
+| 11   | _**ST_Slope**_ - the slope of the person’s peak exercise ST segment. <br>[Up: upsloping, Flat: flat, Down: downsloping] |          ‘Up’ or ‘Down’           |
+| 12   | _**HeartDisease**_ - the target variable; if the person has heart disease or not |          0 or 1 (binary)          |
 
 Since this is a classification problem (presence or absence of heart failure), we will be training and tuning K-Nearest Neighbor, Decision Tree, Support Vector Machine, Random Forest, and Naive Bayes models on the dataset, and try to find the best model for our problem.
 
