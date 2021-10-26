@@ -32,7 +32,7 @@ The dataset we decided to use is the Heart Failure Prediction Dataset from Unive
 | 8    | _**MaxHR**_ - the maximum heart rate achieved by the person. | Numerical values between 60 - 202 |
 | 9    | _**ExerciseAngina**_ - exercise-induced angina of the person. <br>[Y: Yes, N: No] |            ‘Y’ or ‘N’             |
 | 10   |     _**Oldpeak**_ - the depression status of the person      | Numerical values between 0 - 6.2  |
-| 11   | _**ST_Slope**_ - the slope of the person’s peak exercise ST segment. <br>[Up: upsloping, Flat: flat, Down: downsloping] |          ‘Up’ or ‘Down’           |
+| 11   | _**ST_Slope**_ - the slope of the person’s peak exercise ST segment. <br>[Up: upsloping, Flat: flat, Down: downsloping] |       ‘Up’, ‘Down’, 'Flat'        |
 | 12   | _**HeartDisease**_ - the target variable; if the person has heart disease or not |          0 or 1 (binary)          |
 
 Since this is a classification problem (presence or absence of heart failure), we will be training and tuning K-Nearest Neighbor, Decision Tree, Support Vector Machine, Random Forest, and Naive Bayes models on the dataset, and try to find the best model for our problem.
