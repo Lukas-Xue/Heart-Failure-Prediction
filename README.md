@@ -11,8 +11,11 @@ ____
 #### Section II, Project Progress
 
 1. [Data Preprocessing](#preprocess)
-
 2. [KNN](#knn)
+
+
+
+
 
 #### Section I, Proposal 
 
@@ -67,6 +70,8 @@ We will be splitting 918 records into two portions: the training set and the tes
 There are totally 63 code submissions using our dataset on Kaggle. Most of them focused on data visualization and prediction model training. So far, the best model we could find on Kaggle is using the Random Forest model with a 90.2% accuracy score by SVEN ESCHLBECK.
 
 There are also several works done by other researchers using another heart failure dataset from UCI which contains 303 records (which is included in this larger dataset). Since the dataset is too small, final models developed are likely to have low complexity, which will cause high bias towards the result.
+
+
 
 
 
