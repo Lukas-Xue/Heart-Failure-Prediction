@@ -13,9 +13,9 @@ ____
 1. [Data Preprocessing](#preprocess)
 2. [KNN](#knn)
 
+<br>
 
-
-
+<br>
 
 #### Section I, Proposal 
 
@@ -33,7 +33,7 @@ This project aims to create a prediction model to forecast the probability of de
 
 The dataset is from UCI Machine Learning Repository, which is the largest heart disease dataset available so far for research purposes (see [Heart Failure Prediction Dataset](https://www.kaggle.com/fedesoriano/heart-failure-prediction)). We are going to process and analyze the complex medical data related to heart disease with the help of machine learning techniques including some supervised learning algorithms such as K-Nearest Neighbor, Decision Tree, Support Vector Machine, Random Forest, and Naïve Bayes.
 
-
+<br>
 
 ### 2. DESCRIPTION <a name='description'></a>
 
@@ -63,7 +63,7 @@ We will be splitting 918 records into two portions: the training set and the tes
 3. Evaluate the model (model assessment) using the test dataset and different evaluation metrics such as accuracy score and F-1 score;
 4. Train the model using the best hyperparameter we found and the entire train and test dataset.
 
-
+<br>
 
 ### 3. REFERENCE <a name='ref'></a>
 
@@ -71,9 +71,9 @@ There are totally 63 code submissions using our dataset on Kaggle. Most of them 
 
 There are also several works done by other researchers using another heart failure dataset from UCI which contains 303 records (which is included in this larger dataset). Since the dataset is too small, final models developed are likely to have low complexity, which will cause high bias towards the result.
 
+<br>
 
-
-
+<br>
 
 #### Section II, Project Progress
 
@@ -93,7 +93,7 @@ We encoded the categorical features into numerical representations. The table be
 
 We also splited the data into [training dataset](./data/Train.csv) and [testing dataset](./data/Test.csv), and the split ratio is 2:1, respectively. 
 
-
+<br>
 
 #### KNN <a name='knn'></a>
 
