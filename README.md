@@ -97,10 +97,13 @@ We also splited the data into [training dataset](./data/Train.csv) and [testing 
 
 #### KNN <a name='knn'></a>
 
-We impletemented K Nearest Neighbors from scikit learn library. For hyper-parameter tunning, we implemented K-Fold cross validation technique and set the K-Fold to 5. We used GridSearchCV to find the optimal hyper-parameter, weight function, as well as distance metric. Below is the result:
+For code see [knn.py](./code/knn.py). We impletemented K Nearest Neighbors from scikit learn library. For hyper-parameter tunning, we implemented K-Fold cross validation technique and set the K-Fold to 5. We used GridSearchCV to find the optimal hyper-parameter, weight function, as well as distance metric. Below is the result:
 
 ```bash
 $ python knn.py
+```
+
+```bash
 Optimal Hyper-Parameters: {'metric': 'manhattan', 'n_neighbors': 15, 'weights': 'uniform'}
 The accuracy score using the optimal Hyper-Parameters to train the model: 0.8910891089108911
 The f1 score using the optimal Hyper-Parameters to train the model: 0.907563025210084
