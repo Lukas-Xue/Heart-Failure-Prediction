@@ -17,11 +17,11 @@ ____
 
 <br>
 
-#### Section I, Proposal 
+### Section I, Proposal 
 
-----
+___
 
-### 1. OVERVIEW AND MOTIVATION <a name='overview'></a>
+#### 1. OVERVIEW AND MOTIVATION <a name='overview'></a>
 
 Heart disease is the leading cause of death for people of most racial and ethnic groups all around the world over the past few decades. According to the data from Centers for Disease Control and Prevention, More than 600,000 Americans die of heart disease each year - that is one in every four deaths in this country [CDC facts](https://www.cdc.gov/heartdisease/facts.htm). About one in five people who had experienced heart attacks were not aware of it when the damage was done. If more people among them can be conscious of and predict the potential risk of heart disease, they are more likely to get an early diagnosis and prompt management of the disease. Besides, from 2016 to 2017, the United States spent about 363 billion dollars on various kinds of costs due to heart disease [CDC facts](https://www.cdc.gov/heartdisease/facts.htm). We could have saved a large amount of money on the difficult laboratory tests and the subsequent healthcare services as well as lost productivity if we had predicted the heart disease cases.
 
@@ -35,7 +35,7 @@ The dataset is from UCI Machine Learning Repository, which is the largest heart 
 
 <br>
 
-### 2. DESCRIPTION <a name='description'></a>
+#### 2. DESCRIPTION <a name='description'></a>
 
 The dataset we decided to use is the Heart Failure Prediction Dataset from University of California Irvine. This dataset was created by combining five independent dataset, which made it the largest heart disease dataset so far for research purposes. The dataset contains one csv file with 12 columns and 918 records, which contains 11 features of patients and 1 target variable. The target variable that describes the presence or absence of heart failure of patients is binary (0, 1) as follows.
 
@@ -65,7 +65,7 @@ We will be splitting 918 records into two portions: the training set and the tes
 
 <br>
 
-### 3. REFERENCE <a name='ref'></a>
+#### 3. REFERENCE <a name='ref'></a>
 
 There are totally 63 code submissions using our dataset on Kaggle. Most of them focused on data visualization and prediction model training. So far, the best model we could find on Kaggle is using the Random Forest model with a 90.2% accuracy score by SVEN ESCHLBECK.
 
@@ -75,7 +75,7 @@ There are also several works done by other researchers using another heart failu
 
 <br>
 
-#### Section II, Project Progress
+### Section II, Project Progress
 
 ___
 
