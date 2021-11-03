@@ -55,6 +55,7 @@ def ST_Slope(df):
     return df
 
 
+# do the train test split. Train:Test = 2:1
 def split(df):
     train, test = train_test_split(df, test_size=0.33, random_state=1)
     return train, test
