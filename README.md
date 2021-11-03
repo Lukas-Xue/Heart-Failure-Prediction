@@ -1,20 +1,18 @@
 ## Heart Failure Prediction Using Machine Learning
 
-##### Section I, Proposal
+#### Section I, Proposal
 
 1. [Overview & Motivation](#overview)
 2. [Description](#description)
 3. [Reference](#ref)
 
----
+____
 
-##### Section II, Project Progress
+#### Section II, Project Progress
 
 1. [Data Preprocessing](#preprocess)
 
 2. [KNN](#knn)
-
-   
 
 #### Section I, Proposal 
 
