@@ -1,31 +1,27 @@
 import argparse
 import pandas as pd
 from sklearn.metrics import accuracy_score
-from sklearn import neighbors
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import f1_score
 
 
-# train the knn model
 def train_(xTrain, yTrain):
-    # use GridSearchCV for 5-fold cv to tune the hyper parameter
-    grid_param = {'n_neighbors': [i for i in range(1, 50)],
-                  'weights': ['distance', 'uniform'],
-                  'metric': ['euclidean', 'manhattan']}
+    # grid search and cross validation
+    grid_param = {'max_depth': [i for i in range(1, 100)],
+                  'min_samples_leaf': [i for i in range(1, 100)],
+                  'criterion': ['gini', 'entropy']}
+    model = GridSearchCV(DecisionTreeClassifier(),
+                         grid_param,
+                         cv=10)
+    model.fit(xTrain, yTrain)
+    print('Optimal Hyper-Parameters:', model.best_params_)
+    return model
 
-    knn = GridSearchCV(neighbors.KNeighborsClassifier(),
-                       grid_param,
-                       cv=10)
 
-    knn.fit(xTrain, yTrain)
-    print('Optimal Hyper-Parameters:', knn.best_params_)
-    return knn
-          
-
-# make the prediction and see the score
-def test_(knn, xTest):
-    return knn.predict(xTest)
+def predict(model, xTest):
+    return model.predict(xTest)
 
 
 def main():
@@ -51,9 +47,10 @@ def main():
     xTrain = stdScale.transform(xTrain)
     xTest = stdScale.transform(xTest)
 
-    # train and test
-    model = train_(xTrain, yTrain)
-    yHat = test_(model, xTest)
+    dt = train_(xTrain, yTrain)
+    yHat = predict(dt, xTest)
+
+    # score
     print('The accuracy score using the optimal Hyper-Parameters to train the model:', accuracy_score(yTest, yHat))
     print('The f1 score using the optimal Hyper-Parameters to train the model:',
           f1_score(yTest, yHat))
