@@ -1,31 +1,16 @@
 import argparse
 import pandas as pd
 from sklearn.metrics import accuracy_score
-from sklearn import neighbors
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import f1_score
+from sklearn.tree import DecisionTreeClassifier
 
 
-# train the knn model
 def train_(xTrain, yTrain):
-    # use GridSearchCV for 5-fold cv to tune the hyper parameter
-    grid_param = {'n_neighbors': [i for i in range(1, 50)],
-                  'weights': ['distance', 'uniform'],
-                  'metric': ['euclidean', 'manhattan']}
+    
 
-    knn = GridSearchCV(neighbors.KNeighborsClassifier(),
-                       grid_param,
-                       cv=10)
-
-    knn.fit(xTrain, yTrain)
-    print('Optimal Hyper-Parameters:', knn.best_params_)
-    return knn
-          
-
-# make the prediction and see the score
-def test_(knn, xTest):
-    return knn.predict(xTest)
+def test_(model, xTest):
 
 
 def main():
@@ -51,12 +36,6 @@ def main():
     xTrain = stdScale.transform(xTrain)
     xTest = stdScale.transform(xTest)
 
-    # train and test
-    model = train_(xTrain, yTrain)
-    yHat = test_(model, xTest)
-    print('The accuracy score using the optimal Hyper-Parameters to train the model:', accuracy_score(yTest, yHat))
-    print('The f1 score using the optimal Hyper-Parameters to train the model:',
-          f1_score(yTest, yHat))
 
 
 if __name__ == '__main__':

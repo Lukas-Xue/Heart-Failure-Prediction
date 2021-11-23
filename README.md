@@ -12,14 +12,12 @@ ____
 
 1. [Data Preprocessing](#preprocess)
 2. [KNN](#knn)
-
-<br>
+2. [Decision Tree](#dt)
+2. [Random Forest](#rf)
 
 <br>
 
 ### Section I, Proposal 
-
-___
 
 #### 1. OVERVIEW AND MOTIVATION <a name='overview'></a>
 
@@ -79,7 +77,7 @@ There are also several works done by other researchers using another heart failu
 
 ___
 
-#### 1. Data Preprocessing <a name='preprocess'></a>
+#### Data Preprocessing <a name='preprocess'></a>
 
 We encoded the categorical features into numerical representations. The table below shows the original values and encoded values. 
 
@@ -97,14 +95,41 @@ We also splited the data into [training dataset](./data/Train.csv) and [testing 
 
 #### KNN <a name='knn'></a>
 
-For code see [knn.py](./code/knn.py). We impletemented K Nearest Neighbors from scikit learn library. For hyper-parameter tunning, we implemented K-Fold cross validation technique and set the K-Fold to 5. We used GridSearchCV to find the optimal hyper-parameter, weight function, as well as distance metric. Below is the result:
+For code see [knn.py](./code/knn.py). We impletemented K Nearest Neighbors from scikit learn library. For hyper-parameter tuning, we implemented K-Fold cross validation technique and set the K-Fold to 10. We used GridSearchCV to find the optimal hyper-parameter. Below is the result:
 
 ```bash
 $ python knn.py
-```
-
-```bash
 Optimal Hyper-Parameters: {'metric': 'manhattan', 'n_neighbors': 15, 'weights': 'uniform'}
 The accuracy score using the optimal Hyper-Parameters to train the model: 0.8910891089108911
 The f1 score using the optimal Hyper-Parameters to train the model: 0.907563025210084
 ```
+
+We can see that the accuracy score reaches 0.89. Since it is not sufficient to only use accuracy score as the evaluation metric, we also used f1 score to evaluate the model since we want to minimize the number of False Negatives (which is important for medical data prediction). We can see that the F1 score reaches 0.91 for K Nearest Neighbors classifier.
+
+<br>
+
+#### Decision Tree <a name='dt'></a>
+
+For code see [dt.py](./code/dt.py). We impletemented Decision Tree classifier from scikit learn library. For hyper-parameter tuning, we impletemented K-Fold cross validation technique and set the K-Fold to 10. Using GridSearchCV, we found the optimal hyper-parameter. Below is the result:
+
+```bash
+$ python dt.py
+Optimal Hyper-Parameters: {'criterion': 'gini', 'max_depth': 3, 'min_samples_leaf': 9}
+The accuracy score using the optimal Hyper-Parameters to train the model: 0.834983498349835
+The f1 score using the optimal Hyper-Parameters to train the model: 0.8579545454545454
+```
+
+The accuracy score for the decision tree model is 0.83, and f1 score is 0.86. For the next approach, I will use bagging technique to create a random forest. 
+
+<br>
+
+#### Random Forest <a name='rf'></a>
+
+For code see [rf.py](./code/rf.py). We impletemented Random Forest from scikit learn library. For hyper-parameter uning, we impletemented GridSearchCV and K-Fold cross validation to estimate the OOB error. 
+
+```bash
+$ python rf.py
+```
+
+
+
