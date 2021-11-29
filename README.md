@@ -12,8 +12,9 @@ ____
 
 1. [Data Preprocessing](#preprocess)
 2. [KNN](#knn)
-2. [Decision Tree](#dt)
-2. [Random Forest](#rf)
+3. [Decision Tree](#dt)
+4. [Random Forest](#rf)
+5. [Support Vector Machine](#svm)
 
 <br>
 
@@ -132,7 +133,7 @@ $ python rf.py
 ```
 <br>
 
-#### Support Vector Machine <a name='dt'></a>
+#### Support Vector Machine <a name='svm'></a>
 
 For code see [svm.py](./code/svm.py). We impletemented Support Vector Machine classifier from scikit learn library. For hyper-parameter tuning, we impletemented K-Fold cross validation technique and set the K-Fold to 10. Using GridSearchCV, we found the optimal hyper-parameter. Below is the result:
 
