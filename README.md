@@ -130,6 +130,21 @@ For code see [rf.py](./code/rf.py). We impletemented Random Forest from scikit l
 ```bash
 $ python rf.py
 ```
+<br>
+
+#### Support Vector Machine <a name='dt'></a>
+
+For code see [svm.py](./code/svm.py). We impletemented Support Vector Machine classifier from scikit learn library. For hyper-parameter tuning, we impletemented K-Fold cross validation technique and set the K-Fold to 10. Using GridSearchCV, we found the optimal hyper-parameter. Below is the result:
+
+```bash
+$ python svm.py
+Optimal Hyper-Parameters: {'C': 1, 'gamma': 0.1, 'kernel': 'rbf'}
+The accuracy score using the optimal Hyper-Parameters to train the model: 0.8712871287128713
+The f1 score using the optimal Hyper-Parameters to train the model: 0.888888888888889
+```
+
+The accuracy score for the decision tree model is 0.87, and f1 score is 0.89.
+
 
 
 
