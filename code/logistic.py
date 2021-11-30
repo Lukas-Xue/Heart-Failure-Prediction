@@ -1,27 +1,27 @@
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.metrics import f1_score
+from sklearn.model_selection import GridSearchCV
 import argparse
 import pandas as pd
-from sklearn.metrics import accuracy_score
-from sklearn import neighbors
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import f1_score
 
 
 # train the knn model
 def train_(xTrain, yTrain):
     # use GridSearchCV for 5-fold cv to tune the hyper parameter
-    grid_param = {'n_neighbors': [i for i in range(1, 50)],
-                  'weights': ['distance', 'uniform'],
-                  'metric': ['euclidean', 'manhattan']}
+    grid_param = {'penalty': ['l1', 'l2', 'elasticnet', 'none'],
+                  'solver': ['newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga'],
+                  'C': [100, 10, 1.0, 0.1, 0.01]}
 
-    knn = GridSearchCV(neighbors.KNeighborsClassifier(),
+    knn = GridSearchCV(LogisticRegression(),
                        grid_param,
                        cv=10)
 
     knn.fit(xTrain, yTrain)
     print('Optimal Hyper-Parameters:', knn.best_params_)
     return knn
-          
+
 
 # make the prediction and see the score
 def test_(knn, xTest):
@@ -47,11 +47,9 @@ def main():
     xTest = test.drop(columns=['HeartDisease'])
 
     # proper scaling
-    stdScale = StandardScaler().fit(xTrain)
+    stdScale = MinMaxScaler().fit(xTrain)
     xTrain = stdScale.transform(xTrain)
     xTest = stdScale.transform(xTest)
-    print(xTrain)
-    print(xTest)
 
     # train and test
     model = train_(xTrain, yTrain)
