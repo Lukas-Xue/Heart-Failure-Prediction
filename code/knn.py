@@ -31,10 +31,10 @@ def test_(knn, xTest):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--train",
-                        default="../data/Train.csv",
+                        default="../data/Train_old.csv",
                         help="file name of the training dataset")
     parser.add_argument("--test",
-                        default="../data/Test.csv",
+                        default="../data/Test_old.csv",
                         help="file name of the testing dataset")
     args = parser.parse_args()
     train = pd.read_csv(args.train)
