@@ -39,7 +39,7 @@ def RestingECG(df):
 # encoding ExerciseAngina into binary: [N -> 0, Y -> 1]
 def ExerciseAngina(df):
     for i in range(df.shape[0]):
-        df.iloc[i, 8] = 0 if df.iloc[i, 6] == 'N' else 1
+        df.iloc[i, 8] = 0 if df.iloc[i, 8] == 'N' else 1
     return df
 
 
@@ -69,7 +69,7 @@ def main():
     args = parser.parse_args()
     train, test = split(ST_Slope(ExerciseAngina(RestingECG(chest_pain_type(sex(pd.read_csv(args.data)))))))
     train.to_csv('../data/Train_old.csv', index=False)
-    test.to_csv('//data/Test_old.csv', index=False)
+    test.to_csv('../data/Test_old.csv', index=False)
 
 
 if __name__ == '__main__':

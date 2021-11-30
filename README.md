@@ -78,7 +78,7 @@ There are also several works done by other researchers using another heart failu
 
 ___
 
-#### Data Preprocessing <a name='preprocess'></a>
+#### DATA PREPROCESSING <a name='preprocess'></a>
 
 We encoded the categorical features into numerical representations. The table below shows the original values and encoded values. 
 
@@ -109,7 +109,7 @@ We can see that the accuracy score reaches 0.89. Since it is not sufficient to o
 
 <br>
 
-#### Decision Tree <a name='dt'></a>
+#### DECISION TREE <a name='dt'></a>
 
 For code see [dt.py](./code/dt.py). We impletemented Decision Tree classifier from scikit learn library. For hyper-parameter tuning, we impletemented K-Fold cross validation technique and set the K-Fold to 10. Using GridSearchCV, we found the optimal hyper-parameter. Below is the result:
 
@@ -124,7 +124,7 @@ The accuracy score for the decision tree model is 0.83, and f1 score is 0.86. Fo
 
 <br>
 
-#### Random Forest <a name='rf'></a>
+#### RANDOM FOREST <a name='rf'></a>
 
 For code see [rf.py](./code/rf.py). We impletemented Random Forest from scikit learn library. For hyper-parameter uning, we impletemented GridSearchCV and K-Fold cross validation to estimate the OOB error. 
 
@@ -145,7 +145,5 @@ The f1 score using the optimal Hyper-Parameters to train the model: 0.8888888888
 ```
 
 The accuracy score for the decision tree model is 0.87, and f1 score is 0.89.
-
-
 
 
