@@ -115,12 +115,12 @@ For code see [dt.py](./code/dt.py). We impletemented Decision Tree classifier fr
 
 ```bash
 $ python dt.py
-Optimal Hyper-Parameters: {'criterion': 'gini', 'max_depth': 3, 'min_samples_leaf': 9}
-The accuracy score using the optimal Hyper-Parameters to train the model: 0.834983498349835
-The f1 score using the optimal Hyper-Parameters to train the model: 0.8579545454545454
+Optimal Hyper-Parameters: {'criterion': 'gini', 'max_depth': 3, 'min_samples_leaf': 5}
+The accuracy score using the optimal Hyper-Parameters to train the model: 0.822463768115942
+The f1 score using the optimal Hyper-Parameters to train the model: 0.851963746223565
 ```
 
-The accuracy score for the decision tree model is 0.83, and f1 score is 0.86. For the next approach, I will use bagging technique to create a random forest. 
+The accuracy score for the decision tree model is 0.82, and f1 score is 0.85. For the next approach, I will use bagging technique to create a random forest. 
 
 <br>
 
@@ -130,6 +130,20 @@ For code see [rf.py](./code/rf.py). We impletemented Random Forest from scikit l
 
 ```bash
 $ python rf.py
+Tuning:
+Fitting 5 folds for each of 180 candidates, totalling 900 fits
+Best parameters: 
+ {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'n_estimators': 162}
+              precision    recall  f1-score   support
+
+           0       0.85      0.86      0.85       109
+           1       0.91      0.90      0.90       167
+
+    accuracy                           0.88       276
+   macro avg       0.88      0.88      0.88       276
+weighted avg       0.88      0.88      0.88       276
+
+F1 score:  0.9036144578313253
 ```
 <br>
 
