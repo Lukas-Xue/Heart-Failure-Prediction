@@ -154,22 +154,54 @@ For code see [svm.py](./code/svm.py). We impletemented Support Vector Machine cl
 ```bash
 $ python svm.py
 Optimal Hyper-Parameters: {'C': 1, 'gamma': 0.1, 'kernel': 'rbf'}
-The accuracy score using the optimal Hyper-Parameters to train the model: 0.8712871287128713
-The f1 score using the optimal Hyper-Parameters to train the model: 0.888888888888889
+The accuracy score using the optimal Hyper-Parameters to train the model: 0.8804347826086957
+The f1 score using the optimal Hyper-Parameters to train the model: 0.9009009009009009
 ```
 
 The accuracy score for the decision tree model is 0.87, and f1 score is 0.89.
 
 
+#### Logistic Regression <a name='lr'></a>
 
-Optimal Hyper-Parameters: {'C': 1, 'gamma': 0.1, 'kernel': 'rbf'}
-The accuracy score using the optimal Hyper-Parameters to train the model: 0.8804347826086957
-The f1 score using the optimal Hyper-Parameters to train the model: 0.9009009009009009
-
-
-
-Logistic Regression
-
+```bash
+$ python logistic.py
 Optimal Hyper-Parameters: {'C': 0.01, 'penalty': 'l2', 'solver': 'newton-cg'}
 The accuracy score using the optimal Hyper-Parameters to train the model: 0.894927536231884
 The f1 score using the optimal Hyper-Parameters to train the model: 0.9134328358208956
+```
+The accuracy score for the decision tree model is 0.89, and f1 score is 0.91.
+
+#### Naive Bayes <a name='nb'></a>
+
+```bash
+$ python nb.py
+Optimal Hyper-Parameters: {'var_smoothing': 0.0533669923120631}
+The accuracy score using the optimal Hyper-Parameters to train the model: 0.8316831683168316
+The f1 score using the optimal Hyper-Parameters to train the model: 0.853868194842407
+```
+The accuracy score for the decision tree model is 0.83, and f1 score is 0.85.
+
+#### Gradient Boosting <a name='lr'></a>
+
+```bash
+$ python gdb.py
+Optimal Hyper-Parameters: {'criterion': 'friedman_mse', 'learning_rate': 0.2, 'loss': 'deviance', 'max_depth': 3, 'max_features': 'sqrt', 'min_samples_leaf': 0.1, 'min_samples_split': 0.2090909090909091, 'n_estimators': 10, 'subsample': 0.8}
+The accuracy score using the optimal Hyper-Parameters to train the model: 0.8712871287128713
+The f1 score using the optimal Hyper-Parameters to train the model: 0.8925619834710743
+```
+The accuracy score for the decision tree model is 0.87, and f1 score is 0.89.
+
+#### Voting Ensemble <a name='lr'></a>
+
+```bash
+$ python ens.py
+The accuracy score using the optimal Hyper-Parameters to train the model: 0.8844884488448845
+The f1 score using the optimal Hyper-Parameters to train the model: 0.9014084507042254
+```
+The accuracy score for the decision tree model is 0.88, and f1 score is 0.90.
+
+
+
+
+
+
