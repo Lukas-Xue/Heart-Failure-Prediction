@@ -189,7 +189,9 @@ The accuracy score for the decision tree model is 0.83, and f1 score is 0.85.
 
 ```bash
 $ python gdb.py
-Optimal Hyper-Parameters: {'criterion': 'friedman_mse', 'learning_rate': 0.2, 'loss': 'deviance', 'max_depth': 3, 'max_features': 'sqrt', 'min_samples_leaf': 0.1, 'min_samples_split': 0.2090909090909091, 'n_estimators': 10, 'subsample': 0.8}
+Optimal Hyper-Parameters: {'criterion': 'friedman_mse', 'learning_rate': 0.2, 
+'loss': 'deviance', 'max_depth': 3, 'max_features': 'sqrt', 'min_samples_leaf': 0.1, 
+'min_samples_split': 0.2090909090909091, 'n_estimators': 10, 'subsample': 0.8}
 The accuracy score using the optimal Hyper-Parameters to train the model: 0.8712871287128713
 The f1 score using the optimal Hyper-Parameters to train the model: 0.8925619834710743
 ```
