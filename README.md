@@ -15,6 +15,10 @@ ____
 3. [Decision Tree](#dt)
 4. [Random Forest](#rf)
 5. [Support Vector Machine](#svm)
+6. [Logistic Regression](#lr)
+7. [Naive Bayes](#nb)
+8. [Gradient Boosting](#gdb)
+9. [Voting Ensemble](#ens)
 
 <br>
 
@@ -181,7 +185,7 @@ The f1 score using the optimal Hyper-Parameters to train the model: 0.8538681948
 ```
 The accuracy score for the decision tree model is 0.83, and f1 score is 0.85.
 
-#### Gradient Boosting <a name='lr'></a>
+#### Gradient Boosting <a name='gdb'></a>
 
 ```bash
 $ python gdb.py
@@ -191,7 +195,7 @@ The f1 score using the optimal Hyper-Parameters to train the model: 0.8925619834
 ```
 The accuracy score for the decision tree model is 0.87, and f1 score is 0.89.
 
-#### Voting Ensemble <a name='lr'></a>
+#### Voting Ensemble <a name='ens'></a>
 
 ```bash
 $ python ens.py
