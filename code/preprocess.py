@@ -64,12 +64,12 @@ def split(df):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--data",
-                        default="../heart_disease.csv",
+                        default="../data/heart_disease.csv",
                         help="filename of the input data")
     args = parser.parse_args()
     train, test = split(ST_Slope(ExerciseAngina(RestingECG(chest_pain_type(sex(pd.read_csv(args.data)))))))
-    train.to_csv('Train.csv', index=False)
-    test.to_csv('Test.csv', index=False)
+    train.to_csv('../data/Train_old.csv', index=False)
+    test.to_csv('//data/Test_old.csv', index=False)
 
 
 if __name__ == '__main__':
