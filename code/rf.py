@@ -9,6 +9,9 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 
+import matplotlib.pyplot as plt
+from sklearn import metrics
+
 
 def tuneRF(xTrain, yTrain):
     # Number of trees in random forest
@@ -39,6 +42,7 @@ def train_test(xTrain, yTrain, xTest, yTest):
     model = tuneRF(xTrain, yTrain)
     print("Best parameters: \n", model.best_params_)
     score(model, xTest, yTest)
+
     return model
 
 
@@ -78,8 +82,11 @@ def main():
     xTrain = stdScale.transform(xTrain)
     xTest = stdScale.transform(xTest)
 
-    model = train_test(xTrain, yTrain, xTest, yTest)
-
+    # model = train_test(xTrain, yTrain, xTest, yTest)
+    rf = RandomForestClassifier(max_depth=17, max_features='auto', min_samples_leaf=2, n_estimators=50)
+    rf.fit(xTrain, yTrain)
+    metrics.plot_roc_curve(rf, xTest, yTest)
+    plt.show()
 
 if __name__ == '__main__':
     main()
