@@ -5,6 +5,8 @@ from sklearn.metrics import f1_score
 from sklearn.model_selection import GridSearchCV
 import argparse
 import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn import metrics
 
 
 # train the knn model
@@ -57,6 +59,9 @@ def main():
     print('The accuracy score using the optimal Hyper-Parameters to train the model:', accuracy_score(yTest, yHat))
     print('The f1 score using the optimal Hyper-Parameters to train the model:',
           f1_score(yTest, yHat))
+    model.fit(xTrain, yTrain)
+    metrics.plot_roc_curve(model, xTest, yTest)
+    plt.show()
 
 
 if __name__ == '__main__':
