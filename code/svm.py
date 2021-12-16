@@ -6,14 +6,16 @@ from sklearn import svm
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import f1_score
-from warnings import simplefilter 
+from warnings import simplefilter
+import matplotlib.pyplot as plt
+from sklearn import metrics
 
 
 def train_(xTrain, yTrain):
     # grid search and cross validation
     grid_param = {'C': [0.1, 1, 10, 100, 1000],
                   'gamma': [1, 0.1, 0.01, 0.001, 0.0001],
-                  'kernel': ['rbf','linear']}
+                  'kernel': ['rbf', 'linear']}
     model = GridSearchCV(svm.SVC(),
                          grid_param,
                          cv=10)
@@ -51,8 +53,11 @@ def main():
     xTrain = stdScale.transform(xTrain)
     xTest = stdScale.transform(xTest)
 
-    dt = train_(xTrain, yTrain)
-    yHat = predict(dt, xTest)
+    svm_model = train_(xTrain, yTrain)
+    yHat = predict(svm_model, xTest)
+    svm_model.fit(xTrain, yTrain)
+    metrics.plot_roc_curve(svm_model, xTest, yTest)
+    plt.show()
 
     # score
     print('The accuracy score using the optimal Hyper-Parameters to train the model:', accuracy_score(yTest, yHat))
